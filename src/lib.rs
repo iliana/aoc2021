@@ -1,4 +1,3 @@
-pub use itertools::Itertools;
 pub use libc_print::*;
 
 #[macro_export]
