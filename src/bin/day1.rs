@@ -1,7 +1,7 @@
 #![no_std]
 
 use aoc2021::*;
-pub use itertools::Itertools;
+use itertools::Itertools;
 
 fn part1(data: impl Iterator<Item = u16>) -> usize {
     data.tuple_windows().filter(|(a, b)| a < b).count()

@@ -18,7 +18,7 @@ impl FromStr for Command {
             .split_whitespace()
             .collect_tuple()
             .ok_or("too many spaces")?;
-        let amount = amount.parse().map_err(|_| "couldn't parse u8")?;
+        let amount = amount.parse().map_err(|_| "couldn't parse i64")?;
         Ok(match command {
             "forward" => Command::Forward(amount),
             "down" => Command::Down(amount),
